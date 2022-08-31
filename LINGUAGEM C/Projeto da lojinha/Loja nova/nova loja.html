@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>nova loja.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+.cpp1-assembler { color: #0000FF; }
+.cpp1-character { color: #000000; }
+.cpp1-comment { color: #0078D7; font-style: italic; }
+.cpp1-float { color: #800080; }
+.cpp1-hexadecimal { color: #800080; }
+.cpp1-identifier { color: #000000; }
+.cpp1-illegalchar { color: #000000; }
+.cpp1-number { color: #800080; }
+.cpp1-octal { color: #800080; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { color: #000000; font-weight: bold; }
+.cpp1-space { background-color: #FFFFFF; color: #000000; }
+.cpp1-string { color: #0000FF; font-weight: bold; }
+.cpp1-symbol { color: #FF0000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 10pt Consolas;"><span class="cpp1-preprocessor">#include &lt;iostream&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+</span><span class="cpp1-comment">/* run this program using the console pauser or add your own getch, system(&quot;pause&quot;) or input loop */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> menu</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n****Produtos disponiveis****\n\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot; 1--Camisa Polo\n 2--Calca Jeans\n 3--Bermuda\n 4--Tenis\n&quot;</span><span class="cpp1-symbol">);
+}
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> sele_produtos</span><span class="cpp1-symbol">(){</span><span class="cpp1-comment">//para selecionar o produto desejado ap&oacute;s o MENU
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> produtos</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">switch</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">produtos</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">			printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;1--Camisa Polo\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">2</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">			printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;2--Calca jeans\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">3</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">			printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;3--Bermuda\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">4</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">			printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;4--Tenis\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			
+	</span><span class="cpp1-symbol">}
+}
+
+</span><span class="cpp1-space">				</span><span class="cpp1-comment">//fun&ccedil;&atilde;o para as cores
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> cores_camisas</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> camisa_cor</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\nSelecione a cor:\n\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;1--Camisa Polo Azul:\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;2--Camisa Polo Vermelha:\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;3--Camisa Polo Preta:\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">camisa_cor</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">		</span><span class="cpp1-reservedword">while</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">camisa_cor</span><span class="cpp1-symbol">!=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">switch</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">camisa_cor</span><span class="cpp1-symbol">){
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">				printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;1--Camisa Polo Azul:\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">camisa_cor</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">				</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">2</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">				printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;2--Camisa Polo Vermelha:\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">camisa_cor</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">				</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">3</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">				printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;3--Camisa Polo Vermelha:\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">camisa_cor</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">				</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">4</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">				printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;4--Tenis\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">			</span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">			</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">		
+		</span><span class="cpp1-symbol">}
+
+}
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> main</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> argc</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">char</span><span class="cpp1-symbol">**</span><span class="cpp1-space"> argv</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">	</span><span class="cpp1-comment">/*Aqui &eacute; s&atilde;o as variaveis locais*/
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">char</span><span class="cpp1-space"> nome_completo</span><span class="cpp1-symbol">[</span><span class="cpp1-number">50</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">char</span><span class="cpp1-space"> cpf</span><span class="cpp1-symbol">[</span><span class="cpp1-number">12</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">char</span><span class="cpp1-space"> endereco</span><span class="cpp1-symbol">[</span><span class="cpp1-number">50</span><span class="cpp1-symbol">];
+
+</span><span class="cpp1-space">	
+	bermuda </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">50</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	calca </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">100</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	tenis </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">120</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-comment">/*Aqui come&ccedil;a as fun&ccedil;&otilde;es*/
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\t\t\t****************SEJA BEM-VINDO!!****************\n\n \t\t\tVamos fazer o seu cadastro!\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Digite o seu nome: \n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	fgets</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">nome_completo</span><span class="cpp1-symbol">,</span><span class="cpp1-number">50</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">stdin</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Digite o seu CPF:\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	fgets</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">cpf</span><span class="cpp1-symbol">,</span><span class="cpp1-number">12</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">stdin</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\t\tQue bom que voce fez o seu cadastro!!\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">	menu</span><span class="cpp1-symbol">();</span><span class="cpp1-comment">/*Aqui ir&aacute; mostrar a fun&ccedil;&atilde;o que &eacute; a lista dos itens disponiveis*/
+</span><span class="cpp1-space">	sele_produtos</span><span class="cpp1-symbol">();</span><span class="cpp1-comment">//Sele&ccedil;&atilde;o dos produtos
+</span><span class="cpp1-space">	cores_camisas</span><span class="cpp1-symbol">();</span><span class="cpp1-comment">//as cores das camisas
+</span><span class="cpp1-space">	
+	
+	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+}
+</span></span>
+</code></pre>
+</body>
+</html>
